@@ -12,4 +12,8 @@ class GitlabNotifier < Sinatra::Base
   get "/" do
     "Gitlab Slack Notifier v#{VERSION}"
   end
+
+  post "/receive" do
+    "OK"
+  end
 end
