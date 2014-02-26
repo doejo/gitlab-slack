@@ -14,6 +14,16 @@ class GitlabNotifier < Sinatra::Base
   end
 
   post "/receive" do
+    payload = params[:payload]
+
+    if ENV["DEBUG"]
+      STDOUT.puts(payload.inspect)
+    end
+
+    if payload.nil?
+      halt 400, "Payload required"
+    end
+
     "OK"
   end
 end

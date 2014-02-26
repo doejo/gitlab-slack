@@ -1,0 +1,34 @@
+{
+  "after": "a96a0df33262e2d2fd1b20162553aae6750f8c00",
+  "before": "0188ef243dd8083a4d4761766342b523d521247d",
+  "commits": [{
+      "author": {
+        "email": "dan.sosedoff@gmail.com",
+        "name": "Dan Sosedoff"
+      },
+      "id": "bce85c7015af8ff5e50bab160f8bd1aa9b2738e1",
+      "message": "Commit 1",
+      "timestamp": "2013-03-22T19:44:53+00:00",
+      "url": "https://gitlab.com/sosedoff/bar/commit/bce85c7015af8ff5e50bab160f8bd1aa9b2738e1"
+    }, {
+      "author": {
+        "email": "dan.sosedoff@gmail.com",
+        "name": "Dan Sosedoff"
+      },
+      "id": "a96a0df33262e2d2fd1b20162553aae6750f8c00",
+      "message": "Commit 2",
+      "timestamp": "2013-03-22T19:44:56+00:00",
+      "url": "https://gitlab.com/sosedoff/bar/commit/a96a0df33262e2d2fd1b20162553aae6750f8c00"
+    }
+  ],
+  "ref": "refs/heads/master",
+  "repository": {
+    "description": null,
+    "homepage": "https://gitlab.com/sosedoff/bar",
+    "name": "bar",
+    "url": "git@gitlab.com:sosedoff/bar.git"
+  },
+  "total_commits_count": 2,
+  "user_id": 3686,
+  "user_name": "Dan Sosedoff"
+}

@@ -11,6 +11,7 @@ SimpleCov.start
 
 require "sinatra"
 require "rack/test"
+require "json"
 require "./app"
 
 RSpec.configure do |config|
@@ -23,6 +24,10 @@ end
 
 def fixture(file)
   File.read(File.join(fixture_path, file))
+end
+
+def json_fixture(file)
+  JSON.load(fixture(file))
 end
 
 def app
