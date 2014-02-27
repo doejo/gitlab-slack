@@ -6,43 +6,12 @@ describe Message do
   describe "#to_s" do
     let(:result) { message.to_s }
 
-    context "for new branch" do
-      let(:payload) { Payload.new(json_fixture "new_branch.json") }
+    %w(new_branch deleted_branch commit commits no_commits).each do |name|
+      it "renders message for #{name.sub(/_/, " ")}" do
+        payload = Payload.new(json_fixture("#{name}.json"))
+        result  = fixture("messages/#{name}.txt")
 
-      it "returns new branch message" do
-        expect(result).to eq fixture "messages/new_branch.txt"
-      end
-    end
-
-    context "for deleted branch" do
-      let(:payload) { Payload.new(json_fixture "deleted_branch.json") }
-
-      it "returns deleted branch message" do
-        expect(result).to eq fixture "messages/deleted_branch.txt"
-      end
-    end
-
-    context "for a single commit" do
-      let(:payload) { Payload.new(json_fixture "commit.json") }
-
-      it "returns a single commit message" do
-        expect(result).to eq fixture "messages/commit.txt"
-      end
-    end
-
-    context "for multiple commits" do
-      let(:payload) { Payload.new(json_fixture "commits.json") }
-
-      it "returns multiple commits message" do
-        expect(result).to eq fixture "messages/commits.txt"
-      end
-    end
-
-    context "for push with no commits" do
-      let(:payload) { Payload.new(json_fixture "no_commits.json") }
-
-      it "returns only push message" do
-        expect(result).to eq fixture "messages/no_commits.txt"
+        expect(described_class.new(payload).to_s).to eq result
       end
     end
   end
