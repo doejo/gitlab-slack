@@ -30,5 +30,13 @@ describe Message do
         expect(result).to eq fixture "messages/commit.txt"
       end
     end
+
+    context "for multiple commits" do
+      let(:payload) { json_fixture "commits.json" }
+
+      it "returns multiple commits message" do
+        expect(result).to eq fixture "messages/commits.txt"
+      end
+    end
   end
 end
