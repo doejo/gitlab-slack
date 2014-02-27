@@ -22,34 +22,15 @@ class Message
   end
 
   def commits_message
-    [
-      payload.user_name,
-      "pushed to branch",
-      link_to(payload.head, "/commits/#{payload.head}"),
-      "of",
-      link_to(payload.repository.name),
-      "(#{ link_to_compare })"
-    ].join(" ")
+    "#{ payload.user_name } pushed to branch #{ link_to(payload.head, "/commits/#{payload.head}") } of #{ link_to(payload.repository.name) } (#{ link_to_compare })"
   end
 
   def new_branch_message
-    [
-      payload.user_name,
-      "pushed new branch",
-      link_to(payload.head, "/commits/#{payload.head}"),
-      "to",
-      link_to(payload.repository.name)
-    ].join(" ")
+    "#{ payload.user_name } pushed new branch #{ link_to(payload.head, "/commits/#{payload.head}") } to #{ link_to(payload.repository.name) }"
   end
 
   def deleted_branch_message
-    [
-      payload.user_name,
-      "removed branch",
-      payload.head,
-      "from",
-      link_to(payload.repository.name)
-    ].join(" ")
+    "#{ payload.user_name } removed branch #{ payload.head } from #{ link_to(payload.repository.name) }"
   end
 
   def commit_lines

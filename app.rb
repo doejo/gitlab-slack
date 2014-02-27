@@ -2,6 +2,8 @@ require "bundler/setup"
 require "sinatra"
 require "slack-notify"
 require "hashr"
+require "erb"
+
 require "./lib/payload"
 require "./lib/message"
 
