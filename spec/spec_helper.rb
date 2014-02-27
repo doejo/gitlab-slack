@@ -12,6 +12,8 @@ SimpleCov.start
 require "sinatra"
 require "rack/test"
 require "json"
+require "webmock"
+
 require "./app"
 
 RSpec.configure do |config|

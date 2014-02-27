@@ -34,6 +34,10 @@ describe GitlabNotifier do
   describe "POST /receive" do
     let(:payload) { fixture "commits.json" }
 
+    before do
+      SlackNotify::Client.any_instance.stub(:notify)
+    end
+
     context "with valid payload" do
       before do
         post "/receive", payload

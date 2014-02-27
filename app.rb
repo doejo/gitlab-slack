@@ -29,21 +29,23 @@ class GitlabNotifier < Sinatra::Base
   end
 
   post "/receive" do
-    payload = request.body.read
+    body = request.body.read
 
     if ENV["DEBUG"]
-      STDOUT.puts(payload.inspect)
+      STDOUT.puts(body.inspect)
     end
 
-    if payload.empty?
+    if body.empty?
       halt 400, "Payload required"
     end
 
-    json = JSON.load(payload) rescue nil
+    payload = Payload.new(JSON.load(body)) rescue nil
 
-    if json.nil?
+    if payload.nil?
       halt 400, "Not a JSON payload"
     end
+
+    client.notify(Message.new(payload).to_s)
 
     "OK"
   end
