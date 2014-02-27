@@ -1,0 +1,2 @@
+Dan Sosedoff pushed to branch <http://gitlab.com/test/test-gitlab-hooks/commits/master|master> of <http://gitlab.com/test/test-gitlab-hooks|master> (<http://gitlab.com/test/test-gitlab-hooks/compare/85ddf931dc526bf99d2a8dfdf231772450549800...594e3fed78e188653bcd49ce43aca1a063d6267d|Compare changes>)
+- Change (<http://gitlab.com/test/test-gitlab-hooks/commit/594e3fed78e188653bcd49ce43aca1a063d6267d|594e3f>)

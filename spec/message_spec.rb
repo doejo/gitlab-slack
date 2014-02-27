@@ -11,7 +11,7 @@ describe Message do
       let(:payload) { json_fixture "new_branch.json" }
 
       it "returns new branch message" do
-        expect(result).to eq "Dan Sosedoff pushed new branch <http://gitlab.com/test/test-gitlab-hooks/commits/test|test> to <http://gitlab.com/test/test-gitlab-hooks|test-gitlab-hooks>"
+        expect(result).to eq fixture "messages/new_branch.txt"
       end
     end
 
@@ -19,7 +19,15 @@ describe Message do
       let(:payload) { json_fixture "deleted_branch.json" }
 
       it "returns deleted branch message" do
-        expect(result).to eq "Dan Sosedoff removed branch new-branch from <http://gitlab.com/test/test-gitlab-hooks|test-gitlab-hooks>"
+        expect(result).to eq fixture "messages/deleted_branch.txt"
+      end
+    end
+
+    context "for a single commit" do
+      let(:payload) { json_fixture "commit.json" }
+
+      it "returns a single commit message" do
+        expect(result).to eq fixture "messages/commit.txt"
       end
     end
   end

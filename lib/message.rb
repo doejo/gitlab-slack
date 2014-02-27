@@ -1,18 +1,29 @@
 class Message
-  attr_reader :payload
+  attr_reader :payload, :commits
 
   def initialize(payload)
     @payload = Hashr.new(payload)
+    @commits = @payload.commits.map { |h| Hashr.new(h) }
   end
 
   def to_s
-    if new_branch?
-      return new_branch_message
+    return new_branch_message     if new_branch?
+    return deleted_branch_message if deleted_branch?
+
+    message = [
+      payload.user_name,
+      "pushed to branch",
+      "<#{url("/commits/#{head_name}")}|#{head_name}>",
+      "of",
+      "<#{url}|#{head_name}>",
+      "(<#{compare_url}|Compare changes>)"
+    ].join(" ")
+
+    lines = commits.map do |commit|
+      "- #{commit.message.split("\n").first} (<#{commit_url(commit.id)}|#{commit.id[0,6]}>)"
     end
 
-    if deleted_branch?
-      return deleted_branch_message
-    end
+    message + "\n" + lines.join("\n")
   end
 
   private
@@ -51,5 +62,13 @@ class Message
       "from",
       "<#{url}|#{payload.repository.name}>"
     ].join(" ")
+  end
+
+  def compare_url
+    url("/compare/#{payload.before}...#{payload.after}")
+  end
+
+  def commit_url(sha)
+    url("/commit/#{sha}")
   end
 end

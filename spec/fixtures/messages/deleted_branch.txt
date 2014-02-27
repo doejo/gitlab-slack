@@ -1,0 +1,1 @@
+Dan Sosedoff removed branch new-branch from <http://gitlab.com/test/test-gitlab-hooks|test-gitlab-hooks>
