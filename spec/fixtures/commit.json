@@ -1,0 +1,25 @@
+{
+  "before": "85ddf931dc526bf99d2a8dfdf231772450549800",
+  "after": "594e3fed78e188653bcd49ce43aca1a063d6267d",
+  "ref": "refs/heads/master",
+  "user_id": 1,
+  "user_name": "Dan Sosedoff",
+  "project_id": 71,
+  "repository": {
+    "name": "test-gitlab-hooks",
+    "url": "git@gitlab.com:test/test-gitlab-hooks.git",
+    "description": "",
+    "homepage": "http://gitlab.com/test/test-gitlab-hooks"
+  },
+  "commits": [{
+    "id": "594e3fed78e188653bcd49ce43aca1a063d6267d",
+    "message": "Change",
+    "timestamp": "2014-02-27T01:43:25+00:00",
+    "url": "http://gitlab.com/test/test-gitlab-hooks/commit/594e3fed78e188653bcd49ce43aca1a063d6267d",
+    "author": {
+      "name": "Dan Sosedoff",
+      "email": "dan.sosedoff@gmail.com"
+    }
+  }],
+  "total_commits_count": 1
+}

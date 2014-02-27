@@ -1,34 +1,34 @@
 {
-  "after": "a96a0df33262e2d2fd1b20162553aae6750f8c00",
-  "before": "0188ef243dd8083a4d4761766342b523d521247d",
-  "commits": [{
-      "author": {
-        "email": "dan.sosedoff@gmail.com",
-        "name": "Dan Sosedoff"
-      },
-      "id": "bce85c7015af8ff5e50bab160f8bd1aa9b2738e1",
-      "message": "Commit 1",
-      "timestamp": "2013-03-22T19:44:53+00:00",
-      "url": "https://gitlab.com/sosedoff/bar/commit/bce85c7015af8ff5e50bab160f8bd1aa9b2738e1"
-    }, {
-      "author": {
-        "email": "dan.sosedoff@gmail.com",
-        "name": "Dan Sosedoff"
-      },
-      "id": "a96a0df33262e2d2fd1b20162553aae6750f8c00",
-      "message": "Commit 2",
-      "timestamp": "2013-03-22T19:44:56+00:00",
-      "url": "https://gitlab.com/sosedoff/bar/commit/a96a0df33262e2d2fd1b20162553aae6750f8c00"
-    }
-  ],
+  "before": "594e3fed78e188653bcd49ce43aca1a063d6267d",
+  "after": "33da64ad465dd8b447c016e4c0668c6e808a6429",
   "ref": "refs/heads/master",
+  "user_id": 1,
+  "user_name": "Dan Sosedoff",
+  "project_id": 71,
   "repository": {
-    "description": null,
-    "homepage": "https://gitlab.com/sosedoff/bar",
-    "name": "bar",
-    "url": "git@gitlab.com:sosedoff/bar.git"
+    "name": "test-gitlab-hooks",
+    "url": "git@gitlab.doejo.com:test/test-gitlab-hooks.git",
+    "description": "",
+    "homepage": "http://gitlab.doejo.com/test/test-gitlab-hooks"
   },
-  "total_commits_count": 2,
-  "user_id": 3686,
-  "user_name": "Dan Sosedoff"
+  "commits": [{
+    "id": "3ec5e6ef360eac2128c2c605582270649e821721",
+    "message": "Change 1",
+    "timestamp": "2014-02-27T01:43:58+00:00",
+    "url": "http://gitlab.doejo.com/test/test-gitlab-hooks/commit/3ec5e6ef360eac2128c2c605582270649e821721",
+    "author": {
+      "name": "Dan Sosedoff",
+      "email": "dan.sosedoff@gmail.com"
+    }
+  }, {
+    "id": "33da64ad465dd8b447c016e4c0668c6e808a6429",
+    "message": "Change 2",
+    "timestamp": "2014-02-27T01:44:08+00:00",
+    "url": "http://gitlab.doejo.com/test/test-gitlab-hooks/commit/33da64ad465dd8b447c016e4c0668c6e808a6429",
+    "author": {
+      "name": "Dan Sosedoff",
+      "email": "dan.sosedoff@gmail.com"
+    }
+  }],
+  "total_commits_count": 2
 }
