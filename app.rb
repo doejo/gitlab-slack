@@ -1,6 +1,8 @@
 require "bundler/setup"
 require "sinatra"
 require "slack-notify"
+require "hashr"
+require "./lib/message"
 
 ["SLACK_TEAM", "SLACK_TOKEN", "SLACK_CHANNEL"].each do |var|
   raise "#{var} required" if ENV[var].nil?

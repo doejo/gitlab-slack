@@ -7,15 +7,15 @@
   "project_id": 71,
   "repository": {
     "name": "test-gitlab-hooks",
-    "url": "git@gitlab.doejo.com:test/test-gitlab-hooks.git",
+    "url": "git@gitlab.com:test/test-gitlab-hooks.git",
     "description": "",
-    "homepage": "http://gitlab.doejo.com/test/test-gitlab-hooks"
+    "homepage": "http://gitlab.com/test/test-gitlab-hooks"
   },
   "commits": [{
     "id": "3ec5e6ef360eac2128c2c605582270649e821721",
     "message": "Change 1",
     "timestamp": "2014-02-27T01:43:58+00:00",
-    "url": "http://gitlab.doejo.com/test/test-gitlab-hooks/commit/3ec5e6ef360eac2128c2c605582270649e821721",
+    "url": "http://gitlab.com/test/test-gitlab-hooks/commit/3ec5e6ef360eac2128c2c605582270649e821721",
     "author": {
       "name": "Dan Sosedoff",
       "email": "dan.sosedoff@gmail.com"
@@ -24,7 +24,7 @@
     "id": "33da64ad465dd8b447c016e4c0668c6e808a6429",
     "message": "Change 2",
     "timestamp": "2014-02-27T01:44:08+00:00",
-    "url": "http://gitlab.doejo.com/test/test-gitlab-hooks/commit/33da64ad465dd8b447c016e4c0668c6e808a6429",
+    "url": "http://gitlab.com/test/test-gitlab-hooks/commit/33da64ad465dd8b447c016e4c0668c6e808a6429",
     "author": {
       "name": "Dan Sosedoff",
       "email": "dan.sosedoff@gmail.com"

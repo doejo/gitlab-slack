@@ -1,0 +1,16 @@
+{
+  "before": "6e301781291a35e9cd2c5bde253ef398430f84de",
+  "after": "0000000000000000000000000000000000000000",
+  "ref": "refs/heads/new-branch",
+  "user_id": 1,
+  "user_name": "Dan Sosedoff",
+  "project_id": 71,
+  "repository": {
+    "name": "test-gitlab-hooks",
+    "url": "git@gitlab.com:test/test-gitlab-hooks.git",
+    "description": "",
+    "homepage": "http://gitlab.com/test/test-gitlab-hooks"
+  },
+  "commits": [],
+  "total_commits_count": 0
+}
