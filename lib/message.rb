@@ -6,15 +6,22 @@ class Message
   end
 
   def to_s
-    return new_branch_message     if payload.new_branch?
-    return deleted_branch_message if payload.deleted_branch?
-
-    (push_message + "\n" + commit_lines).strip
+    if payload.new_branch?
+      new_branch_message
+    elsif payload.deleted_branch?
+      deleted_branch_message
+    else
+      push_message
+    end
   end
 
   private
 
   def push_message
+    (commits_message + "\n" + commit_lines).strip
+  end
+
+  def commits_message
     [
       payload.user_name,
       "pushed to branch",
