@@ -38,5 +38,13 @@ describe Message do
         expect(result).to eq fixture "messages/commits.txt"
       end
     end
+
+    context "for push with no commits" do
+      let(:payload) { json_fixture "no_commits.json" }
+
+      it "returns only push message" do
+        expect(result).to eq fixture "messages/no_commits.txt"
+      end
+    end
   end
 end

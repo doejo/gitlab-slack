@@ -9,8 +9,8 @@ class Message
   def to_s
     return new_branch_message     if new_branch?
     return deleted_branch_message if deleted_branch?
-    
-    push_message + "\n" + commits_lines
+
+    (push_message + "\n" + commits_lines).strip
   end
 
   private
