@@ -23,12 +23,24 @@ Application requires the following environment variables to function:
 - `SLACK_CHANNEL` - Channel name to post updates to
 - `SLACK_USER`    - Name of the user that sends notifications
 
-## Start Server
+## Usage
+
+Application accepts incoming push payloads from Gitlab on `/receive` endpoint via `POST` request.
 
 To start application just run:
 
 ```
 foreman start
+```
+
+## Deployment
+
+You can deploy this application to Heroku for free:
+
+```
+heroku create
+heroku config SLACK_TEAM=team SLACK_TOKEN=token SLACK_CHANNEl=ops SLACK_USER=gitlab
+git push heroku master
 ```
 
 ## Testing
