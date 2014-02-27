@@ -16,11 +16,11 @@ describe GitlabNotifier do
   end
 
   describe "POST /receive" do
-    let(:payload) { json_fixture "commits.json" }
+    let(:payload) { fixture "commits.json" }
 
     context "with valid payload" do
       before do
-        post "/receive", payload: payload
+        post "/receive", payload
       end
 
       it "responds with 200" do
@@ -33,10 +33,8 @@ describe GitlabNotifier do
     end
 
     context "with no payload" do
-      let(:payload) { nil }
-
       before do
-        post "/receive", payload: payload
+        post "/receive"
       end
 
       it "responds with 400" do
@@ -48,12 +46,26 @@ describe GitlabNotifier do
       end
     end
 
+    context "with non-json payload" do
+      before do
+        post "/receive", "foobar"
+      end
+
+      it "responds with 400" do
+        expect(last_response.status).to eq 400
+      end
+
+      it "returns error message" do
+        expect(last_response.body).to eq "Not a JSON payload"
+      end
+    end
+
     context "when debug env var is set" do
       before do
         ENV["DEBUG"] = "1"
         STDOUT.stub(:puts)
 
-        post "/receive", payload: payload
+        post "/receive", payload
       end
 
       after do
