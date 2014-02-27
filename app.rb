@@ -12,8 +12,20 @@ end
 class GitlabNotifier < Sinatra::Base
   VERSION = "0.1.0"
 
+  def client
+    @client ||= SlackNotify::Client.new(ENV["SLACK_TEAM"], ENV["SLACK_TOKEN"], {
+      channel: ENV["SLACK_CHANNEL"],
+      username: ENV["SLACK_USER"] || "gitlab"
+    })
+  end
+
   get "/" do
     "Gitlab Slack Notifier v#{VERSION}"
+  end
+
+  get "/test" do
+    client.test
+    "OK"
   end
 
   post "/receive" do

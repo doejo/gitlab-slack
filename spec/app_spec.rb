@@ -15,6 +15,22 @@ describe GitlabNotifier do
     end
   end
 
+  describe "GET /test" do
+    before do
+      SlackNotify::Client.any_instance.stub(:test)
+    end
+
+    it "sends a test message" do
+      expect_any_instance_of(SlackNotify::Client).to receive(:test)
+      get "/test"
+    end
+
+    it "responds with OK" do
+      get "/test"
+      expect(last_response.body).to eq "OK"
+    end
+  end
+
   describe "POST /receive" do
     let(:payload) { fixture "commits.json" }
 
