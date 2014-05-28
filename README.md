@@ -37,7 +37,7 @@ You can deploy this application to Heroku for free:
 
 ```
 heroku create
-heroku config:set SLACK_TEAM=team SLACK_TOKEN=token SLACK_CHANNEl=ops SLACK_USER=gitlab
+heroku config:set SLACK_TEAM=team SLACK_TOKEN=token SLACK_CHANNEL=ops SLACK_USER=gitlab
 git push heroku master
 ```
 
