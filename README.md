@@ -2,6 +2,8 @@
 
 Deliver Gitlab code push notifications to a [Slack](https://slack.com/) channel
 
+*NOTE: Gitlab got its own Slack integration since v6.7*
+
 ## Install
 
 Clone repository and install dependencies:
